@@ -12,6 +12,9 @@ export class ServiceWorkerComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('test component has loaded!');
+    window.xtremepush('ready', function() => {
+      xtremepush('prompt');
+    })
     this.loadScript();
   }
 
